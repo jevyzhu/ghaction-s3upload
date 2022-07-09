@@ -1,0 +1,13 @@
+name: s3upload
+description: 'Upload files to s3, in multiple part mode'
+inputs:
+  file:
+    description: 'File to upload'
+    required: true
+    default: '*'
+outputs:
+  filelist: # id of output
+    description: 'File list uploaded'
+runs:
+  using: 'node16'
+  main: 'index.js'
