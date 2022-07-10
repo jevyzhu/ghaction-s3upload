@@ -5,6 +5,10 @@ inputs:
     description: 'File to upload'
     required: true
     default: '*'
+  max_cur:
+    description: 'Max number of parallel tasks'
+    required: true
+    default: 20
 outputs:
   filelist: # id of output
     description: 'File list uploaded'
