@@ -12,8 +12,10 @@ try {
   console.log(`File pattern: ${file}!`);
   const maxcur = core.getInput('max_cur');
   console.log(`Max tasks numer : ${maxcur}!`);
+  const s3path = core.getInput('s3path');
+  console.log(`S3 path: ${s3path}!`);
   const binary = chooseBinary()
-  const returns  = spawnSync(`${__dirname}/${binary} -p "${file}" -m ${maxcur}`, {
+  const returns  = spawnSync(`${__dirname}/${binary} -p "${file}" -m ${maxcur} -s ${s3path}`, {
     stdio: 'inherit',
     shell: true
   });

@@ -9,6 +9,10 @@ inputs:
     description: 'Max number of parallel tasks'
     required: true
     default: 20
+  s3path:
+    description: 'S3 path to upload to'
+    required: true
+    default: 'cf-buildpacks-bucket'
 outputs:
   filelist: # id of output
     description: 'File list uploaded'
